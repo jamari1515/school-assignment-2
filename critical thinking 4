@@ -1,0 +1,26 @@
+num_grades = 10
+grades = []
+total = 0.0
+
+
+print("Enter the grades:")
+for i in range(num_grades):
+    while True:
+        try:
+            grade = float(input(f"Grade {i+1}: "))
+            break
+        except ValueError:
+            print("Please enter a valid floating-point number.")
+
+    grades.append(grade)
+    total += grade
+
+
+average = total / num_grades
+maximum = max(grades)
+minimum = min(grades)
+
+print("\nStatistics:")
+print(f"Average grade: {average:.2f}")
+print(f"Maximum grade: {maximum:.2f}")
+print(f"Minimum grade: {minimum:.2f}")
